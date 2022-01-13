@@ -56,6 +56,7 @@ class Products extends Component {
     }
 
     render() {
+        // eslint-disable-next-line
         const sortedproductsbyprice = this.state.products.sort((a,b)=>{
             if(this.state.sort==="Expensive"){
                 return b.price-a.price
@@ -64,6 +65,7 @@ class Products extends Component {
                 return a.price - b.price
             }
         });
+        // eslint-disable-next-line
         const sortedproducts =sortedproductsbyprice.sort((a,b)=>{
             if(this.state.sortrating==="highest"){
                 return b.rating.rate-a.rating.rate
@@ -72,6 +74,7 @@ class Products extends Component {
                 return a.rating.rate - b.rating.rate
             }
         });
+        // eslint-disable-next-line
         const filteredandsorted = sortedproducts.filter((val)=>{
             if(this.state.filter==="all") return val
             else {
@@ -141,15 +144,6 @@ class Products extends Component {
                     
                 </div>
 
-                {/* <div className='row'>
-                    {
-                        ProductService.getCategories(this.state.products).map((categorie)=>{
-                            return <div> {categorie} </div>
-                        })
-                    }
-
-                </div> */}
-                
             </div>
         );
     }

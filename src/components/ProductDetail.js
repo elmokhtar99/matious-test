@@ -34,7 +34,7 @@ class ProductDetail extends Component {
         return (
             <div className='container'>
                 <div className="card mb-3">
-                    <img className="card-img-top" src={this.state.product.image} height={400} alt="Card image cap" />
+                    <img className="card-img-top" src={this.state.product.image} height={400} alt={this.state.product.title} />
                     <div className="card-body">
                         <h5 className="card-title">{this.state.product.title}</h5>
                         <p className="card-text">Category : {this.state.product.category}</p>

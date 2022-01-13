@@ -11,6 +11,7 @@ class ProductService {
     }
     getCategories(products){
         let categories = [];
+        // eslint-disable-next-line
         products.map((produit)=>{
             if (!(categories.includes(produit.category)))
                 categories.push(produit.category);
